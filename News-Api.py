@@ -29,3 +29,6 @@ articles = response.json().get("articles", [])
 cur = conn.cursor()
 
 for article in articles:
+    title = article.get("title")
+    source_name = article.get("source", {}).get("name")
+    published_at = article.get("publishedAt")
