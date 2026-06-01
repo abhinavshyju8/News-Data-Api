@@ -13,3 +13,12 @@ conn = psycopg2.connect(
     password=os.getenv("DB_PASSWORD"),
     port=os.getenv("DB_PORT")
 )
+
+url = "https://newsapi.org/v2/top-headlines"
+
+params = {
+    "q": "AI",
+    "language": "en",
+    "pageSize": 40,
+    "apiKey": API_KEY
+}
