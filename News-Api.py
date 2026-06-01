@@ -51,3 +51,5 @@ for article in articles:
     """, (news_date, source_name, title, sentiment_score, sentiment_label))
 
 conn.commit()
+
+print(f"{len(articles)} news articles inserted successfully!")
