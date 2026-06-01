@@ -36,10 +36,16 @@ for article in articles:
     news_date = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ").date()
 
     sentiment_score = TextBlob(title).sentiment.polarity
-    
+
     if sentiment_score > 0:
         sentiment_label = "Positive"
     elif sentiment_score < 0:
         sentiment_label = "Negative"
     else:
         sentiment_label = "Neutral"
+
+    cur.execute("""
+        INSERT INTO news_data
+        (news_date, source_name, title, sentiment_score, sentiment_label)
+        VALUES (%s, %s, %s, %s, %s)
+    """, (news_date, source_name, title, sentiment_score, sentiment_label))
