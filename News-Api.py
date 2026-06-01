@@ -22,3 +22,6 @@ params = {
     "pageSize": 40,
     "apiKey": API_KEY
 }
+
+response = requests.get(url, params=params)
+articles = response.json().get("articles", [])
