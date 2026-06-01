@@ -27,3 +27,5 @@ response = requests.get(url, params=params)
 articles = response.json().get("articles", [])
 
 cur = conn.cursor()
+
+for article in articles:
