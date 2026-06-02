@@ -29,3 +29,6 @@ conn.commit()
 
 print("Table created successfully!")
 
+cur.close()
+conn.close()
+
