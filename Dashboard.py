@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os
 from sqlalchemy import create_engine
 
 st.set_page_config(
@@ -7,6 +8,6 @@ st.set_page_config(
     layout="wide"
 )
 
-DATABASE_URL = "postgresql://postgres:News1234@news-db.ctkci2uuklt0.ap-south-2.rds.amazonaws.com:5432/postgres"
+DATABASE_URL =os.getenv("DATABASE_URL")
 
 engine = create_engine(DATABASE_URL)
