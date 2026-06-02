@@ -26,3 +26,6 @@ CREATE TABLE IF NOT EXISTS news_data (
 """)
 
 conn.commit()
+
+print("Table created successfully!")
+
