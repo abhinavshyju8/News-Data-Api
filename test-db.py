@@ -24,3 +24,5 @@ CREATE TABLE IF NOT EXISTS news_data (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )
 """)
+
+conn.commit()
