@@ -37,3 +37,5 @@ st.sidebar.radio(
     "Navigation",
     ["View News", "Analytics"]
 )
+
+st.sidebar.markdown("### Explanation")
