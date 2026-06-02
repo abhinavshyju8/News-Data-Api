@@ -52,3 +52,5 @@ Scores near 0 are neutral.
 st.sidebar.markdown("### Latest update data")
 if not df.empty:
     st.sidebar.write(df["created_at"].max())
+
+st.markdown('<div class="main-title">News analytics sentiment score dashboard</div>', unsafe_allow_html=True)
