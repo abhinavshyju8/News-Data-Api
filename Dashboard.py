@@ -48,3 +48,7 @@ Scores below 0 are negative.
 Scores near 0 are neutral.
 </div>
 """, unsafe_allow_html=True)
+
+st.sidebar.markdown("### Latest update data")
+if not df.empty:
+    st.sidebar.write(df["created_at"].max())
