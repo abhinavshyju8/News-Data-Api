@@ -76,3 +76,8 @@ else:
             return "background-color: red; color: white"
         else:
             return "background-color: gray; color: white"
+        
+    styled_df = display_df.style.map(
+        color_sentiment,
+        subset=["sentiment_score"]
+    )
